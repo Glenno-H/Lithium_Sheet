@@ -5,8 +5,6 @@ import pandas as pd
 import numpy as np
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 import warnings
-import pprint
-from aggrid_options import grid_options
 from js_config import *
 warnings.filterwarnings("ignore")
 
@@ -90,10 +88,8 @@ gb.configure_column("Parallel", maxWidth=100)
 gb.configure_column("URL", cellRenderer=url_cell_renderer)
 
 gridOptions = gb.build()
-#pprint.pprint(gridOptions)
 
 
 AgGrid(battery_df, gridOptions=gridOptions, columns_auto_size_mode=ColumnsAutoSizeMode.FIT_CONTENTS, width="100%", height=700,
        enable_enterprise_modules=True, allow_unsafe_jscode=True)
 
-#cursor.close()
