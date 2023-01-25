@@ -44,7 +44,7 @@ mydb = mysql.connector.connect(
   host=DB_HOST,
   port=DB_PORT,
   user=DB_UDB_PASSWORD,
-  database=DB_DATABASE"
+  database=DB_DATABASE
 )
 
 df_sql_query = pd.read_sql_query('''select * from Batteries''', mydb)
