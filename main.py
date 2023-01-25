@@ -41,7 +41,7 @@ DB_DATABASE = st.secrets.db_details.db_database
 mydb = mysql.connector.connect(
   host=DB_HOST,
   port=DB_PORT,
-  user=DB_UDB_PASSWORD,
+  user=DB_PASSWORD,
   database=DB_DATABASE
 )
 
