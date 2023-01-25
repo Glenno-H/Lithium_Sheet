@@ -33,14 +33,18 @@ hide = """
 """
 st.markdown(hide, unsafe_allow_html=True)
 
+DB_HOST = st.secrets["db_details.db_host"]
+DB_PORT = st.secrets["db_details.db_port"]
+DB_USERNAME = st.secrets["db_details.db_username"]
+DB_PASSWORD = st.secrets["db_details.db_password"]
+DB_DATABASE = st.secrets["db_details.db_database"]
 
 
 mydb = mysql.connector.connect(
-  host="192.168.192.3",
-  port="3307",
-  user="lithium_sheet",
-  password="bC2(@iO4cD",
-  database="lithium_sheet"
+  host=DB_HOST,
+  port=DB_PORT,
+  user=DB_UDB_PASSWORD,
+  database=DB_DATABASE"
 )
 
 df_sql_query = pd.read_sql_query('''select * from Batteries''', mydb)
