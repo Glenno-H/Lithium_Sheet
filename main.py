@@ -31,11 +31,11 @@ hide = """
 """
 st.markdown(hide, unsafe_allow_html=True)
 
-DB_HOST = st.secrets["db_details.db_host"]
-DB_PORT = st.secrets["db_details.db_port"]
-DB_USERNAME = st.secrets["db_details.db_username"]
-DB_PASSWORD = st.secrets["db_details.db_password"]
-DB_DATABASE = st.secrets["db_details.db_database"]
+DB_HOST = st.secrets.db_details.db_host
+DB_PORT = st.secrets.db_details.db_port
+DB_USERNAME = st.secrets.db_details.db_username
+DB_PASSWORD = st.secrets.db_details.db_password
+DB_DATABASE = st.secrets.db_details.db_database
 
 
 mydb = mysql.connector.connect(
